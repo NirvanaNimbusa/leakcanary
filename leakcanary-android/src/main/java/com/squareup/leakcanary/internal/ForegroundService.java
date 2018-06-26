@@ -17,11 +17,16 @@ package com.squareup.leakcanary.internal;
 
 import android.app.IntentService;
 import android.app.Notification;
+import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import com.squareup.leakcanary.R;
+
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.O;
 
 public abstract class ForegroundService extends IntentService {
 
